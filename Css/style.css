@@ -1,0 +1,423 @@
+:root{
+    --blue: 	#1773EC;
+    --dark-blue: 	#003366;
+    --grey-blue: 	#0033663b;
+    --black: #1B1B1B;
+    --white: #ffffff;
+    --tration :0.5;
+}
+a {
+    text-decoration: none;
+}
+.br-3 {
+    border-radius: 50px;
+}
+.br-left-top-2 {
+    border-top-left-radius: 20px;
+}
+.br-right-top-2 {
+    border-top-right-radius: 20px;
+}
+.br-right-bottom-2 {
+    border-bottom-right-radius: 20px;
+}
+.br-left-bottom-2 {
+    border-bottom-left-radius: 20px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+  text-transform: capitalize;
+  background-color: var(--black);
+  overflow-x: hidden;
+}
+
+.circle {
+    position: absolute;
+    top: -149px;
+    right: -149px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(#1773EC, transparent);
+    z-index: -1;
+}
+/* تعريف الحركة للأعلى والأسفل */
+@keyframes moveUpDown {
+    0% {
+        transform: rotate(-15deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-15deg) translateY(-20px); /* التحرك للأعلى */
+    }
+    100% {
+        transform: rotate(-15deg) translateY(0); /* العودة للأسفل */
+    }
+}
+
+.boxrectangular {
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    transform: rotate(-15deg); /* ضبط الدوران الأساسي */
+    animation: moveUpDown 2s ease-in-out infinite; /* إضافة الأنيميشن */
+}
+
+.boxrectangular_1 {
+    display: flex;
+    position: absolute;
+    bottom: 66px;
+    transform: rotate(-15deg); /* ضبط الدوران الأساسي */
+    animation: moveUpDown 2s ease-in-out infinite; /* إضافة الأنيميشن */
+    animation-delay: 1s; /* تأخير الأنيميشن قليلاً عن العنصر الأول */
+}
+
+.rectangular {
+    width: 176px;
+    height: 22px;
+    background-color: #ffffff42;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+
+.rectangularSmall {
+    width: 90px;
+    height: 22px;
+    background-color: #ffffff42;
+    border-radius: 25px;
+}
+.rectangular_1 {
+    width: 158px;
+    height: 22px;
+    background-color: #ffffff42;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.rectangularSmall_1 {
+    width: 72px;
+    height: 22px;
+    background-color: #ffffff42;
+    border-radius: 25px;
+}
+
+/* start nav */
+nav a {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navbar{
+    padding: auto;
+}
+
+.navbar a {
+    color: var(--white);
+}
+
+.navbar .navbar-brand {
+    border-bottom: 2px solid var(--blue);
+}
+.nav-link:hover ,
+.navbar-brand:hover {
+    color: var(--white);
+}
+
+.nav-link {
+    position: relative;
+    margin: 0 3px; 
+    transition: margin 0.5s ease; 
+}
+
+.nav-link:hover {
+    margin-right: 10px;
+}
+
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0; 
+    background-color: transparent;
+    transition: width 0.5s ease;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    background-color: var(--blue); 
+}
+
+
+
+/* end nav */
+
+/* start Linding */
+
+.linding .button h2{
+    padding: 8px;
+    background-color: var(--dark-blue);
+    width: 269px;
+    text-align: center;
+    margin: 8px 0;
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 21px;
+    text-transform:lowercase;
+}
+.linding {
+    position: relative;
+}
+
+.linding .p_linding_1 {
+    transform: rotate(345deg);
+    position: relative;/* left: -89px; */
+}
+
+.linding .p_linding_2 {
+    transform: rotate(12deg);
+    position: relative;/* right: 171px; */
+}
+
+.linding .text p {
+    font-size: 25px;
+    color: var(--blue);
+    font-weight: bold;
+    line-height: 0;
+}
+
+.linding .text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.linding .text h2 {
+    font-size: 25px;
+    color: var(--white);
+    font-weight: bold;
+    line-height: 0;
+}
+
+.linding .icon {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.linding .icon svg {
+    padding-right: 20px;
+    color: var(--white);
+}
+
+/* end Linding */
+
+/* start about me */
+
+.about .button h2{
+    padding: 8px;
+    background-color: var(--dark-blue);
+    width: 263px;
+    text-align: center;
+    margin: 8px 0;
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 21px;
+    text-transform:lowercase;
+}
+.about {
+    position: relative;
+    color:var(--white) ;
+}
+
+.about .image .img_right {
+    width: 361px;
+    height: 600px;
+}
+.about .image .up-down {
+    display: flex;
+    flex-direction: column;
+}
+
+.about .image img {
+    width: 300px;
+    height: 300px;
+    transition: 0.5s;
+}
+
+.about .image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about .text p {
+    font-size: 20px;
+    line-height: 37px;
+    width: 90%;
+}
+
+/* end about me */
+
+/*  start  project */
+
+.project .box {
+    width: fit-content;
+    padding: 6px;
+    transition: 0.5s;
+}
+.project .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project .box svg{
+    font-size: 25px;
+    color: var(--blue);
+}
+
+/*  end  project */
+
+/* start Achievements */
+.Achievements p a{
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+/* end Achievements */
+
+/* start skill  */
+.line-ss{
+    background-color: var(--grey-blue);
+    width: 50%;
+    height: 10px;
+    & .linesc{
+        background-color: var(--blue);
+        width: 100%;
+        height: 10px;
+    }
+    & .linesc-2{
+        background-color: var(--blue);
+        width: 70%;
+        height: 10px;
+    }
+    & .linesc-3{
+        background-color: var(--blue);
+        width: 50%;
+        height: 10px;
+    }
+    & .linesc-4{
+        background-color: var(--blue);
+        width: 10%;
+        height: 10px;
+    }
+    & .linesc-5{
+        background-color: var(--blue);
+        width: 40%;
+        height: 10px;
+    }
+    & .linesc-6{
+        background-color: var(--blue);
+        width: 100%;
+        height: 10px;
+    }
+}
+/* end skill  */
+/* start resume */
+
+/* end resume */
+/* start about */
+/* .box-about{
+    box-shadow: 1px 1px 3px ;
+    border-radius: 10px;
+    justify-content: space-between;
+    margin: 10px;
+   
+} */
+
+.line{
+    width: 50px ;
+    height: 2px;
+    background-color: var(--blue);
+}
+
+   
+/* end about */
+
+
+
+/* medie */
+
+@media screen and (max-width: 993px) {
+    .boxrectangular {
+        top: 100px;
+        right: 13px;
+    }
+    
+    .boxrectangular_1 {
+        top: 66px;
+        right: 20px;
+    }
+  }
+/* media 750 */
+@media screen and (max-width: 759px) {
+    /* linding */
+    /* .linding {
+        background-image: url(../Figma/linding.jfif);
+    } */
+    .rectangular {
+        width: 146px;
+        height: 13px;
+        background-color: #ffffff42;
+        border-radius: 25px;
+        margin-right: 9px;
+    }
+    
+    .rectangularSmall {
+        width: 70px;
+        height: 13px;
+        background-color: #ffffff42;
+        border-radius: 25px;
+    }
+    .rectangular_1 {
+        width: 128px;
+        height: 13px;
+        background-color: #ffffff42;
+        border-radius: 25px;
+        margin-right: 6px;
+    }
+    
+    .rectangularSmall_1 {
+        width: 52px;
+        height: 13px;
+        background-color: #ffffff42;
+        border-radius: 25px;
+    }
+    
+    .linding .text p ,
+    .linding .text h2 {
+        font-size: 25px;
+    }
+    
+    .linding .text h1 {
+        font-size: 50px;
+    }
+    .linding .img-linding {
+        display: none;
+    }
+    /* end linding */
+  }
+@media screen and (max-width: 768px) {
+    .circle {
+        top: -97px;
+        right: -49px;
+        width: 300px;
+        height: 300px;
+    }
+
+  }
+@media screen and (max-width: 595px) {
+
+  }
+
