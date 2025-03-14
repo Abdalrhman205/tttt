@@ -44,10 +44,10 @@ body{
 }
 .circle {
     position: absolute;
-    top: -149px;
-    right: -149px;
-    width: 600px;
-    height: 600px;
+    top: 0;
+    right: -180px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     background: radial-gradient(#1773EC, transparent);
     z-index: -1;
@@ -198,6 +198,7 @@ nav a {
 }
 .linding {
     position: relative;
+    overflow: hidden;
 }
 
 .linding .p_linding_1 {
@@ -512,14 +513,12 @@ footer {
   }
 @media screen and (max-width: 768px) {
     .circle {
-        top: -97px;
-        right: -49px;
+        top: 0;
+        right: -145px;
         width: 300px;
         height: 300px;
     }
 
   }
-@media screen and (max-width: 595px) {
 
-  }
 
