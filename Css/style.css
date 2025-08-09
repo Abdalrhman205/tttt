@@ -34,10 +34,11 @@ body{
   text-transform: capitalize;
   background-color: var(--black);
   overflow-x: hidden;
+  /* direction: rtl; */
 }
 
 .line{
-    width: 50px ;
+
     height: 2px;
     background-color: var(--blue);
     border-radius: 20px;
@@ -72,16 +73,16 @@ body{
     z-index: -1;
 }
 
-/* تعريف الحركة للأعلى والأسفل */
+/* ØªØ¹Ø±ÙŠÙ Ø§Ù„Ø­Ø±ÙƒØ© Ù„Ù„Ø£Ø¹Ù„Ù‰ ÙˆØ§Ù„Ø£Ø³ÙÙ„ */
 @keyframes moveUpDown {
     0% {
         transform: rotate(-15deg) translateY(0);
     }
     50% {
-        transform: rotate(-15deg) translateY(-20px); /* التحرك للأعلى */
+        transform: rotate(-15deg) translateY(-20px); /* Ø§Ù„ØªØ­Ø±Ùƒ Ù„Ù„Ø£Ø¹Ù„Ù‰ */
     }
     100% {
-        transform: rotate(-15deg) translateY(0); /* العودة للأسفل */
+        transform: rotate(-15deg) translateY(0); /* Ø§Ù„Ø¹ÙˆØ¯Ø© Ù„Ù„Ø£Ø³ÙÙ„ */
     }
 }
 
@@ -89,17 +90,17 @@ body{
     display: flex;
     position: absolute;
     bottom: 40px;
-    transform: rotate(-15deg); /* ضبط الدوران الأساسي */
-    animation: moveUpDown 2s ease-in-out infinite; /* إضافة الأنيميشن */
+    transform: rotate(-15deg); /* Ø¶Ø¨Ø· Ø§Ù„Ø¯ÙˆØ±Ø§Ù† Ø§Ù„Ø£Ø³Ø§Ø³ÙŠ */
+    animation: moveUpDown 2s ease-in-out infinite; /* Ø¥Ø¶Ø§ÙØ© Ø§Ù„Ø£Ù†ÙŠÙ…ÙŠØ´Ù† */
 }
 
 .boxrectangular_1 {
     display: flex;
     position: absolute;
     bottom: 66px;
-    transform: rotate(-15deg); /* ضبط الدوران الأساسي */
-    animation: moveUpDown 2s ease-in-out infinite; /* إضافة الأنيميشن */
-    animation-delay: 1s; /* تأخير الأنيميشن قليلاً عن العنصر الأول */
+    transform: rotate(-15deg); /* Ø¶Ø¨Ø· Ø§Ù„Ø¯ÙˆØ±Ø§Ù† Ø§Ù„Ø£Ø³Ø§Ø³ÙŠ */
+    animation: moveUpDown 2s ease-in-out infinite; /* Ø¥Ø¶Ø§ÙØ© Ø§Ù„Ø£Ù†ÙŠÙ…ÙŠØ´Ù† */
+    animation-delay: 1s; /* ØªØ£Ø®ÙŠØ± Ø§Ù„Ø£Ù†ÙŠÙ…ÙŠØ´Ù† Ù‚Ù„ÙŠÙ„Ø§Ù‹ Ø¹Ù† Ø§Ù„Ø¹Ù†ØµØ± Ø§Ù„Ø£ÙˆÙ„ */
 }
 
 .rectangular {
@@ -264,6 +265,7 @@ nav a {
 .about .image .img_right {
     width: 361px;
     height: 600px;
+    border-radius: 51px;
 }
 
 .about .image img {
@@ -296,6 +298,7 @@ nav a {
     width: fit-content;
     padding: 6px;
     transition: 0.5s;
+    border-radius: 37px;
 }
 .project .box:hover {
     transform: scale(1.05);
@@ -354,6 +357,8 @@ footer {
     background: linear-gradient(to top, #001f4d, #111);
     padding: 20px 0;
     text-align: center;
+    position: relative;
+    bottom: 0;
 }
 
 .footer-content {
@@ -522,3 +527,146 @@ footer {
   }
 
 
+/* start Rubik page */
+
+
+.hero {
+    border-radius: 10px;
+    background: linear-gradient(to right, #1773EC, #003366);
+    color: white;
+    text-align: center;
+    height: 230px;
+    display: flex;
+    animation: fadeIn 1s ease-out;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.cta-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.cta-btn:hover {
+    background-color: var(--dark-blue);
+}
+
+
+.achievements,
+.person-record,
+/* .challenges, */
+.tutorials {
+    background: #00000040;
+    color: white;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 17px;
+    display: flex;
+    animation: slideUp 0.8s ease-out;
+    flex-direction: column;
+    justify-content: center;
+}
+.achievements span {
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 1px;
+}
+.tutorials p {
+    display: flex;
+    justify-content: space-between;
+}
+@keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+section h2 {
+    color: #ffffff;
+    font-size: 24px;
+    padding-bottom: 24px;
+}
+
+.challenges {
+    background-color: var(--blue);
+    border-radius: 10px;
+    color: white;
+    padding: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+}
+
+.challenges:hover {
+    transform: scale(1.05);
+    
+}
+
+.challenge-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.challenge-btn:hover {
+    background-color: var(--dark-blue);
+}
+
+
+.hero h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* end Rubik page */
+
+/* start Run page */
+.achievements .custom-shape-divider-top-1742166907 svg {
+    border-radius: 11px;
+    z-index: -1;
+    position: absolute;
+}
+.achievements ul {
+    list-style: none;
+    padding: 0;
+}
+.achievements li {
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: left;
+}
+.achievements ul li svg {
+    color: var(--blue);
+    padding-right: 9px;
+}
+.achievements {
+    position: relative;
+}
+.custom-shape-divider-top-1742166907{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    fill: var(--blue);
+}
+.person-record {
+
+}
+/* end Run page */

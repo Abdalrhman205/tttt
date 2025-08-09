@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Certificates</title>
+
+        <!-- تحميل مكتبة Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+        <!-- إضافة ملفات CSS المطلوبة فقط -->
+
+        <link rel="stylesheet" href="Css/style.css">
+
+        <!-- إضافة سكربتات مطلوبة فقط -->
+        <script src="Js/all.min.js"></script>
+        <script src="Js/test.js"></script>
+
+        <style>
+
+
+            .title {
+                color: #ffffff;
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+            .stats-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .stats-table th, .stats-table td {
+                border: 1px solid #ddd;
+                padding: 10px;
+                text-align: center;
+            }
+            .stats-table th {
+                background: #1773EC;
+                color: white;
+            }
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+            }
+            .gallery img {
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- start nav  -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"
+                                id="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"
+                                id="Achievements">Achievements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"
+                                id="skill">skill</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"
+                                id="resume">resume</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"
+                                id="about">about</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end nav  -->
+        <div class="circle"></div>
+        <div class="container">
+
+            <div class="row">
+                <section id="certificates">
+                    <div class="title mt-3 mb-3">
+                        <img src="Title-pro-certificates.svg" alt>
+                    </div>
+                    <p>Explore the certifications I’ve earned throughout my
+                        learning journey.</p>
+
+                    <div class="certificates-grid">
+
+                        <!-- بطاقة 1 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'First Place in Preparatory Certificate',
+                'Awarded for achieving 1st place in the preparatory school certificate from Al-Zahraa School.',
+                'Issued by: Al-Zahraa School - 26/02/2025',
+                'imag/certeficate/photo_1_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_1_2025-08-04_02-11-51.jpg"
+                                    alt="First Place Certificate">
+                                <h4>First Place in Preparatory Certificate</h4>
+                            </div>
+                            <p>Al-Zahraa School - 2025 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 2 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Certified Referee in Rubik’s Cube Competitions',
+                'Certified referee in Rubik’s Cube competitions by the Libyan Rubik’s Cube Club.',
+                'Issued by: Libyan Rubik’s Cube Club - 08/09/2022',
+                'imag/certeficate/photo_2_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_2_2025-08-04_02-11-51.jpg"
+                                    alt="Rubik’s Cube Referee Certificate">
+                                <h4>Certified Referee in Rubik’s Cube
+                                    Competitions</h4>
+                            </div>
+                            <p>Libyan Rubik’s Cube Club - 2022 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 3 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Attendance Certificate for Memory and Retention Secrets Training',
+                'Participation in training course for memory and retention secrets.',
+                'Issued by: Training Center - 27/08/2022',
+                'imag/certeficate/photo_3_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_3_2025-08-04_02-11-51.jpg"
+                                    alt="Memory Training Certificate">
+                                <h4>Attendance Certificate for Memory and
+                                    Retention Secrets Training</h4>
+                            </div>
+                            <p>Training Center - 2022 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 4 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Thanks for Participation in Sports Competition',
+                'Appreciation for participating in a sports competition at Al-Zahraa School.',
+                'Issued by: Al-Zahraa School - 11/12/2022',
+                'imag/certeficate/photo_4_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_4_2025-08-04_02-11-51.jpg"
+                                    alt="Sports Competition Thanks Certificate">
+                                <h4>Thanks for Participation in Sports
+                                    Competition</h4>
+                            </div>
+                            <p>Al-Zahraa School - 2022 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 5 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Completion of Web Design Training Program',
+                'Successfully completed the web design training program.',
+                'Issued by: Training Center - 26/08/2023',
+                'imag/certeficate/photo_5_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_5_2025-08-04_02-11-51.jpg"
+                                    alt="Web Design Training Certificate">
+                                <h4>Completion of Web Design Training
+                                    Program</h4>
+                            </div>
+                            <p>Training Center - 2023 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 6 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Basic Education Completion Certificate',
+                'Completed basic education with 97% and ranked third in Al-Swani municipality.',
+                'Issued by: Al-Swani Municipality - 09/12/2023',
+                'imag/certeficate/photo_6_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_6_2025-08-04_02-11-51.jpg"
+                                    alt="Basic Education Certificate">
+                                <h4>Basic Education Completion Certificate</h4>
+                            </div>
+                            <p>Al-Swani Municipality - 2023 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 7 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Participation in Disabled Sports Championship',
+                'Participated in athletics championship for disabled athletes at national level, first place in 100m race.',
+                'Issued by: Al-Tadamon Club - 26/10/2021',
+                'imag/certeficate/photo_7_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_7_2025-08-04_02-11-51.jpg"
+                                    alt="Disabled Sports Championship Certificate">
+                                <h4>Participation in Disabled Sports
+                                    Championship</h4>
+                            </div>
+                            <p>Al-Tadamon Club - 2021 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 8 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Participation in University Activity for Disabled',
+                'Participated in university-level disability sports championship, first place in 100m race.',
+                'Issued by: Ministry of Higher Education - 03/12/2022',
+                'imag/certeficate/photo_8_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_8_2025-08-04_02-11-51.jpg"
+                                    alt="University Disability Activity Certificate">
+                                <h4>Participation in University Activity for
+                                    Disabled</h4>
+                            </div>
+                            <p>Ministry of Higher Education - 2022 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 9 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Participation in Major Athletics Award - Marrakech',
+                'First participation in major athletics award, ran 100m and 200m among adults.',
+                'Issued by: Marrakech Event - 11/03/2023',
+                'imag/certeficate/photo_9_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_9_2025-08-04_02-11-51.jpg"
+                                    alt="Major Athletics Award Certificate">
+                                <h4>Participation in Major Athletics Award -
+                                    Marrakech</h4>
+                            </div>
+                            <p>Marrakech Event - 2023 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 10 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Participation in World Disability Day Event',
+                'Participated in World Disability Day under the slogan Lights We Achieve by creating a special exhibition.',
+                'Issued by: Event Organizers - 14/12/2023',
+                'imag/certeficate/photo_10_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_10_2025-08-04_02-11-51.jpg"
+                                    alt="World Disability Day Participation Certificate">
+                                <h4>Participation in World Disability Day
+                                    Event</h4>
+                            </div>
+                            <p>Event Organizers - 2023 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 11 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Academic Excellence Certificate',
+                'Recognition for academic excellence at Al-Karimia Secondary School.',
+                'Issued by: Al-Karimia Secondary School - 25/02/2025',
+                'imag/certeficate/photo_11_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_11_2025-08-04_02-11-51.jpg"
+                                    alt="Academic Excellence Certificate">
+                                <h4>Academic Excellence Certificate</h4>
+                            </div>
+                            <p>Al-Karimia Secondary School - 2025 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 13 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Sports Achievement Certificate',
+                'Recognition for achievements in athletics by Al-Karimia Sports, Cultural, and Social Club.',
+                'Issued by: Al-Karimia Sports Club - 27/01/2025',
+                'imag/certeficate/photo_13_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_13_2025-08-04_02-11-51.jpg"
+                                    alt="Sports Achievement Certificate">
+                                <h4>Sports Achievement Certificate</h4>
+                            </div>
+                            <p>Al-Karimia Sports Club - 2025 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 14 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Academic Competition Excellence',
+                'Recognition for excellence in the methodological competition at Al-Karimia Secondary School.',
+                'Issued by: Al-Karimia Secondary School - 25/01/2025',
+                'imag/certeficate/photo_14_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_14_2025-08-04_02-11-51.jpg"
+                                    alt="Academic Competition Excellence Certificate">
+                                <h4>Academic Competition Excellence</h4>
+                            </div>
+                            <p>Al-Karimia Secondary School - 2025 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 15 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Third Place in City Summer 2023 Rubik’s Cube Competition',
+                'Achieved third place in 3x3 Rubik’s Cube competition at the City Summer 2023 event (general category).',
+                'Issued by: City Summer 2023 Committee - 07/09/2023',
+                'imag/certeficate/photo_15_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_15_2025-08-04_02-11-51.jpg"
+                                    alt="Rubik’s Cube Competition Certificate">
+                                <h4>Third Place in City Summer 2023 Rubik’s Cube
+                                    Competition</h4>
+                            </div>
+                            <p>City Summer 2023 Committee - 2023 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                        <!-- بطاقة 16 -->
+                        <div class="certificate-card"
+                            onclick="showCertificateDetails(
+                'Third Place in 100m Men T47 at 2023 Arab Sports Games',
+                'Achieved third place in 100m men T47 race at the 2023 Arab Sports Games.',
+                'Issued by: Arab Sports Games Committee - 15/07/2023',
+                'imag/certeficate/photo_16_2025-08-04_02-11-51.jpg',
+                []
+            )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/certeficate/photo_16_2025-08-04_02-11-51.jpg"
+                                    alt="Arab Sports Games Certificate">
+                                <h4>Third Place in 100m Men T47 at 2023 Arab
+                                    Sports Games</h4>
+                            </div>
+                            <p>Arab Sports Games Committee - 2023 <i
+                                    class="fa-solid fa-arrow-right arrow-icon"
+                                    title="Click for more info"></i></p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- SweetAlert2 Library -->
+                <script
+                    src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+                <!-- Script to show certificate description -->
+                <script>
+function showCertificateDetails(title, description, footer, imageUrl, extraImages = []) {
+  let extraImagesHTML = "";
+  
+  if (extraImages.length > 0) {
+    extraImagesHTML = "<h4 style='margin-top:15px;'>Event / Activity Photos</h4>";
+    extraImages.forEach(img => {
+      extraImagesHTML += `<img src="${img}" alt="Extra Photo" style="max-width:100%;margin-top:5px;border-radius:8px;">`;
+    });
+  }
+
+  Swal.fire({
+    html: `
+      <img src="${imageUrl}" alt="${title}" style="max-width:100%;margin-bottom:15px;border-radius:8px;">
+      <h2 style="margin-bottom:10px;">${title}</h2>
+      <p style="font-size:16px;">${description}</p>
+      <a href="${imageUrl}" download style="display:inline-block;margin-top:10px;color:#007bff;text-decoration:underline;">Download Certificate</a>
+      ${extraImagesHTML}
+    `,
+    footer: footer,
+    width: 600,
+    confirmButtonText: 'Close'
+  });
+}
+</script>
+
+                <style>
+#certificates {
+  padding: 50px 20px;
+  text-align: center;
+  /* background-color: #f9f9f9; */
+}
+.certificates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #1b1b1b;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  width: 250px;
+  height: 301px; /* ثابت لكل البطاقات */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 15px;
+  text-align: center;
+}
+
+.certificate-card:hover {
+  transform: scale(1.05);
+}
+
+.certificate-card img {
+  height: 180px; /* ارتفاع موحد */
+  object-fit: contain; /* أو cover حسب النتيجة */
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.certificate-card h4 {
+  font-size: 16px;
+  margin: 0px 0 4px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.certificate-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  position: relative;
+}
+.certificate-card p svg{
+    position: absolute;
+    right: -9px;
+    bottom: -8px;
+}
+.arrow-icon {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 5px;
+  transform: rotate(45deg);
+  border-radius: 45px;
+  transition: color 0.3s ease;
+  background-color: #007bff;
+}
+
+.certificate-card:hover .arrow-icon {
+  color: #0056b3;
+  background-color: white;
+}
+
+
+</style>
+
+            </div>
+
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="image">
+                        <img src="Profile.png" alt="Profile">
+                    </div>
+                    <div class="info">
+                        <h1>Abdalrhman Bzmazem</h1>
+                        <hr>
+                        <p>I don't give up</p>
+                    </div>
+                </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li><i class="fas fa-circle"></i> About</li>
+                        <li><i class="fas fa-circle"></i> Skill &
+                            Resume</li>
+                        <li><i class="fas fa-circle"></i> Projects</li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <p><strong>Contact:</strong></p>
+                    <p>Email: abdo.bzmazem@gmail.com</p>
+                    <p>Phone: +218 91-9329643</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 All Rights Reserved | Designed by Abdalrhman
+                Bzmazem
+            </div>
+        </footer>
+        <!-- footer -->
+        <script src="Js/test.js"></script>
+    </body>
+</html>
