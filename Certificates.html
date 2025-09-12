@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Certificates</title>
+        <title>Certificates Bzmazem</title>
 
         <!-- تحميل مكتبة Bootstrap -->
         <link
@@ -23,43 +23,12 @@
 
         <link rel="stylesheet" href="Css/style.css">
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
         <!-- إضافة سكربتات مطلوبة فقط -->
         <script src="Js/all.min.js"></script>
         <script src="Js/test.js"></script>
 
-        <style>
-
-
-            .title {
-                color: #ffffff;
-                font-size: 22px;
-                margin-bottom: 10px;
-            }
-            .stats-table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            .stats-table th, .stats-table td {
-                border: 1px solid #ddd;
-                padding: 10px;
-                text-align: center;
-            }
-            .stats-table th {
-                background: #1773EC;
-                color: white;
-            }
-            .gallery {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 15px;
-            }
-            .gallery img {
-                width: 100%;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
-
-        </style>
     </head>
     <body>
         <!-- start nav  -->
@@ -103,14 +72,15 @@
         </nav>
         <!-- end nav  -->
         <div class="circle"></div>
-        <div class="container">
+        <div class="container certificates">
 
             <div class="row">
                 <section id="certificates">
                     <div class="title mt-3 mb-3">
-                        <img src="Title-pro-certificates.svg" alt>
+                        <img src="Svg/Title-pro-certificates.svg" alt>
                     </div>
-                    <p>Explore the certifications I’ve earned throughout my
+                    <p class="text-white-50">Explore the certifications I’ve
+                        earned throughout my
                         learning journey.</p>
 
                     <div class="certificates-grid">
@@ -424,117 +394,8 @@
                                     class="fa-solid fa-arrow-right arrow-icon"
                                     title="Click for more info"></i></p>
                         </div>
-
                     </div>
                 </section>
-
-                <!-- SweetAlert2 Library -->
-                <script
-                    src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-                <!-- Script to show certificate description -->
-                <script>
-function showCertificateDetails(title, description, footer, imageUrl, extraImages = []) {
-  let extraImagesHTML = "";
-  
-  if (extraImages.length > 0) {
-    extraImagesHTML = "<h4 style='margin-top:15px;'>Event / Activity Photos</h4>";
-    extraImages.forEach(img => {
-      extraImagesHTML += `<img src="${img}" alt="Extra Photo" style="max-width:100%;margin-top:5px;border-radius:8px;">`;
-    });
-  }
-
-  Swal.fire({
-    html: `
-      <img src="${imageUrl}" alt="${title}" style="max-width:100%;margin-bottom:15px;border-radius:8px;">
-      <h2 style="margin-bottom:10px;">${title}</h2>
-      <p style="font-size:16px;">${description}</p>
-      <a href="${imageUrl}" download style="display:inline-block;margin-top:10px;color:#007bff;text-decoration:underline;">Download Certificate</a>
-      ${extraImagesHTML}
-    `,
-    footer: footer,
-    width: 600,
-    confirmButtonText: 'Close'
-  });
-}
-</script>
-
-                <style>
-#certificates {
-  padding: 50px 20px;
-  text-align: center;
-  /* background-color: #f9f9f9; */
-}
-.certificates-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.certificate-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: #1b1b1b;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  width: 250px;
-  height: 301px; /* ثابت لكل البطاقات */
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  padding: 15px;
-  text-align: center;
-}
-
-.certificate-card:hover {
-  transform: scale(1.05);
-}
-
-.certificate-card img {
-  height: 180px; /* ارتفاع موحد */
-  object-fit: contain; /* أو cover حسب النتيجة */
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 10px;
-}
-
-.certificate-card h4 {
-  font-size: 16px;
-  margin: 0px 0 4px;
-  color: #ffffff;
-  text-align: center;
-}
-
-.certificate-card p {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-  position: relative;
-}
-.certificate-card p svg{
-    position: absolute;
-    right: -9px;
-    bottom: -8px;
-}
-.arrow-icon {
-  color: #ffffff;
-  font-size: 12px;
-  padding: 5px;
-  transform: rotate(45deg);
-  border-radius: 45px;
-  transition: color 0.3s ease;
-  background-color: #007bff;
-}
-
-.certificate-card:hover .arrow-icon {
-  color: #0056b3;
-  background-color: white;
-}
-
-
-</style>
-
             </div>
 
         </div>
@@ -544,21 +405,43 @@ function showCertificateDetails(title, description, footer, imageUrl, extraImage
             <div class="footer-content">
                 <div class="footer-left">
                     <div class="image">
-                        <img src="Profile.png" alt="Profile">
+                        <img src="imag/Profile.png" alt="Profile">
                     </div>
                     <div class="info">
                         <h1>Abdalrhman Bzmazem</h1>
                         <hr>
                         <p>I don't give up</p>
+                        <div class="social-media">
+                            <a
+                                href="https://www.facebook.com/share/1BCNWvRMeE/?mibextid=wwXIfr"
+                                class="sm-link" aria-label="Facebook"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a
+                                href="https://www.tiktok.com/@abdalrhmanbzmazem?_t=ZM-8zeHrazeI3p&_r=1"
+                                class="sm-link" aria-label="TikTok"><i
+                                    class="fab fa-tiktok"></i></a>
+                            <a
+                                href="https://www.instagram.com/abdalrhmanbzmazem?igsh=ZWp0c2Z3cm8yaDBo&utm_source=qr"
+                                class="sm-link" aria-label="Instagram"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/Abdalrhman205"
+                                class="sm-link" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+
+                        </div>
                     </div>
                 </div>
                 <div class="footer-menu">
                     <ul>
-                        <li><i class="fas fa-circle"></i> About</li>
-                        <li><i class="fas fa-circle"></i> Skill &
-                            Resume</li>
-                        <li><i class="fas fa-circle"></i> Projects</li>
+                        <li><a href="index.html#aboutme"><i
+                                    class="fas fa-circle"></i> About</a></li>
+                        <li><a href="index.html#skills"><i
+                                    class="fas fa-circle"></i> Skill &
+                                Resume</a></li>
+                        <li><a href="index.html#projects"><i
+                                    class="fas fa-circle"></i> Projects</a></li>
                     </ul>
+
                 </div>
                 <div class="footer-right">
                     <p><strong>Contact:</strong></p>
@@ -567,8 +450,7 @@ function showCertificateDetails(title, description, footer, imageUrl, extraImage
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2025 All Rights Reserved | Designed by Abdalrhman
-                Bzmazem
+                &copy; 2025 All Rights Reserved | Designed by Abdalrhman Bzmazem
             </div>
         </footer>
         <!-- footer -->

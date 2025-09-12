@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>مكعب روبيك - مهاراتي</title>
+        <title>Rubik Bzmazem</title>
         <!-- تحميل مكتبة Bootstrap -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -33,7 +33,8 @@
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fa-solid fa-bars navbar-toggler-icon"></i>
+
                 </button>
                 <div class="collapse navbar-collapse"
                     id="navbarSupportedContent">
@@ -66,6 +67,7 @@
         <!-- end nav  -->
         <div class="circle"></div>
 
+        <!-- Cards -->
         <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-6 col-sm-12 mt-3 mb-3">
@@ -84,19 +86,6 @@
                         <p>Watch my step-by-step tutorials.</p>
                         <button class="cta-btn" id="viewTutorials">Watch
                             Tutorials</button>
-
-                        <script>
-                document.getElementById("viewTutorials").addEventListener("click", function () {
-                    Swal.fire({
-                        title: 'Join Our Telegram Group',
-                        text: 'We are currently building a dedicated Telegram group for Rubik’s Cube learning. Stay tuned!',
-                        icon: 'info',
-                        confirmButtonText: 'OK',
-                        footer: '<a href="#">Link not available yet - Under construction</a>'
-                        // footer: '<a href="https://t.me/YOUR_GROUP_LINK" target="_blank">Click here to join</a>'
-                    });
-                });
-            </script>
                     </section>
                 </div>
 
@@ -109,114 +98,8 @@
                             Challenge</button>
                     </section>
 
-                    <script
-                        src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                     <script>
-            const moves = ["R", "R'", "L", "L'", "U", "U'", "D", "D'", "F", "F'", "B", "B'", "M", "M'", "E", "E'", "S", "S'"];
-            let timer;
-            let milliseconds = 0, seconds = 0, minutes = 0, hours = 0;
-            let running = false;
-            let isChallengeStarted = false;
-            let currentAlgorithm = "";
-
-            function generateScramble() {
-                currentAlgorithm = generateRandomAlgorithm(15);
-
-                Swal.fire({
-                    title: "Scramble Algorithm",
-                    html: `<p class="fs-4" id="algorithmText">${currentAlgorithm}</p>
-                           <p class="fs-1" id='stopwatch'>00:00:00.000</p>
-                           <button id='startBtn' class='swal2-confirm swal2-styled' onclick='toggleChallenge()'>Start Challenge</button>
-                           <button id='endBtn' class='swal2-cancel swal2-styled' onclick='endChallenge()' style="display: none; background-color: black; color: white;">End Challenge</button>`,
-                    showConfirmButton: false,
-                    allowOutsideClick: false,
-                    didOpen: () => {
-                        document.getElementById("stopwatch").innerText = "00:00:00.000";
-                    }
-                });
-            }
-
-            function toggleChallenge() {
-                let startBtn = document.getElementById('startBtn');
-                let endBtn = document.getElementById('endBtn');
-
-                if (!isChallengeStarted) {
-                    currentAlgorithm = generateRandomAlgorithm(15);
-                    document.getElementById("algorithmText").innerText = currentAlgorithm;
-
-                    startTimer();
-                    startBtn.innerText = "Stop";
-                    startBtn.style.backgroundColor = "red";
-                    startBtn.style.color = "white";
-
-                    isChallengeStarted = true;
-                    endBtn.style.display = "inline-block";
-                } else {
-                    stopTimer();
-                    startBtn.innerText = "Start Challenge";
-                    startBtn.style.backgroundColor = "";
-                    startBtn.style.color = "";
-                    isChallengeStarted = false;
-                }
-            }
-
-            function endChallenge() {
-                stopTimer();
-                resetTimer();
-                Swal.close();
-            }
-
-            function generateRandomAlgorithm(length) {
-                let scramble = [];
-                for (let i = 0; i < length; i++) {
-                    let move = moves[Math.floor(Math.random() * moves.length)];
-                    scramble.push(move);
-                }
-                return scramble.join(" ");
-            }
-
-            function startTimer() {
-                clearInterval(timer);
-                milliseconds = 0;
-                seconds = 0;
-                minutes = 0;
-                hours = 0;
-                updateStopwatch();
-                running = true;
-                timer = setInterval(() => {
-                    if (running) {
-                        milliseconds += 10;
-                        if (milliseconds === 1000) { milliseconds = 0; seconds++; }
-                        if (seconds === 60) { seconds = 0; minutes++; }
-                        if (minutes === 60) { minutes = 0; hours++; }
-                        updateStopwatch();
-                    }
-                }, 10);
-            }
-
-            function stopTimer() {
-                running = false;
-                clearInterval(timer);
-            }
-
-            function resetTimer() {
-                milliseconds = 0;
-                seconds = 0;
-                minutes = 0;
-                hours = 0;
-                updateStopwatch();
-            }
-
-            function updateStopwatch() {
-                let timeString = (hours < 10 ? "0" : "") + hours + ":" +
-                                (minutes < 10 ? "0" : "") + minutes + ":" +
-                                (seconds < 10 ? "0" : "") + seconds + "." +
-                                (milliseconds < 100 ? "0" : "") + (milliseconds < 10 ? "0" : "") + milliseconds;
-                let stopwatchElement = document.getElementById("stopwatch");
-                if (stopwatchElement) {
-                    stopwatchElement.innerText = timeString;
-                }
-            }
+            
         </script>
                 </div>
 
@@ -233,26 +116,50 @@
             </div>
 
         </div>
+        <!-- end Cards -->
 
         <!-- footer -->
         <footer>
             <div class="footer-content">
                 <div class="footer-left">
                     <div class="image">
-                        <img src="Profile.png" alt="Profile">
+                        <img src="imag/Profile.png" alt="Profile">
                     </div>
                     <div class="info">
                         <h1>Abdalrhman Bzmazem</h1>
                         <hr>
                         <p>I don't give up</p>
+                        <div class="social-media">
+                            <a
+                                href="https://www.facebook.com/share/1BCNWvRMeE/?mibextid=wwXIfr"
+                                class="sm-link" aria-label="Facebook"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a
+                                href="https://www.tiktok.com/@abdalrhmanbzmazem?_t=ZM-8zeHrazeI3p&_r=1"
+                                class="sm-link" aria-label="TikTok"><i
+                                    class="fab fa-tiktok"></i></a>
+                            <a
+                                href="https://www.instagram.com/abdalrhmanbzmazem?igsh=ZWp0c2Z3cm8yaDBo&utm_source=qr"
+                                class="sm-link" aria-label="Instagram"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/Abdalrhman205"
+                                class="sm-link" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+
+                        </div>
                     </div>
                 </div>
                 <div class="footer-menu">
                     <ul>
-                        <li><i class="fas fa-circle"></i> About</li>
-                        <li><i class="fas fa-circle"></i> Skill & Resume</li>
-                        <li><i class="fas fa-circle"></i> Projects</li>
+                        <li><a href="index.html#about"><i
+                                    class="fas fa-circle"></i> About</a></li>
+                        <li><a href="index.html#skills"><i
+                                    class="fas fa-circle"></i> Skill &
+                                Resume</a></li>
+                        <li><a href="index.html#projects"><i
+                                    class="fas fa-circle"></i> Projects</a></li>
                     </ul>
+
                 </div>
                 <div class="footer-right">
                     <p><strong>Contact:</strong></p>
@@ -265,5 +172,168 @@
             </div>
         </footer>
         <!-- footer -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="Js/test.js"></script>
+        <script>
+    // Rubik page
+// Tutorials
+document.getElementById("viewTutorials").addEventListener("click", function () {
+  Swal.fire({
+    title: "Join Our Telegram Group",
+    text: "We are currently building a dedicated Telegram group for Rubik’s Cube learning. Stay tuned!",
+    icon: "info",
+    confirmButtonText: "OK",
+    footer: '<a href="#">Link not available yet - Under construction</a>',
+    // footer: '<a href="https://t.me/YOUR_GROUP_LINK" target="_blank">Click here to join</a>'
+  });
+});
+
+// Challenge
+const moves = [
+  "R",
+  "R'",
+  "L",
+  "L'",
+  "U",
+  "U'",
+  "D",
+  "D'",
+  "F",
+  "F'",
+  "B",
+  "B'",
+  "M",
+  "M'",
+  "E",
+  "E'",
+  "S",
+  "S'",
+];
+let timer;
+let milliseconds = 0,
+  seconds = 0,
+  minutes = 0,
+  hours = 0;
+let running = false;
+let isChallengeStarted = false;
+let currentAlgorithm = "";
+
+function generateScramble() {
+  currentAlgorithm = generateRandomAlgorithm(15);
+
+  Swal.fire({
+    title: "Scramble Algorithm",
+    html: `<p class="fs-4" id="algorithmText">${currentAlgorithm}</p>
+                           <p class="fs-1" id='stopwatch'>00:00:00.000</p>
+                           <button id='startBtn' class='swal2-confirm swal2-styled' onclick='toggleChallenge()'>Start Challenge</button>
+                           <button id='endBtn' class='swal2-cancel swal2-styled' onclick='endChallenge()' style="display: none; background-color: black; color: white;">End Challenge</button>`,
+    showConfirmButton: false,
+    allowOutsideClick: false,
+    didOpen: () => {
+      document.getElementById("stopwatch").innerText = "00:00:00.000";
+    },
+  });
+}
+
+function toggleChallenge() {
+  let startBtn = document.getElementById("startBtn");
+  let endBtn = document.getElementById("endBtn");
+
+  if (!isChallengeStarted) {
+    currentAlgorithm = generateRandomAlgorithm(15);
+    document.getElementById("algorithmText").innerText = currentAlgorithm;
+
+    startTimer();
+    startBtn.innerText = "Stop";
+    startBtn.style.backgroundColor = "red";
+    startBtn.style.color = "white";
+
+    isChallengeStarted = true;
+    endBtn.style.display = "inline-block";
+  } else {
+    stopTimer();
+    startBtn.innerText = "Start Challenge";
+    startBtn.style.backgroundColor = "";
+    startBtn.style.color = "";
+    isChallengeStarted = false;
+  }
+}
+
+function endChallenge() {
+  stopTimer();
+  resetTimer();
+  Swal.close();
+}
+
+function generateRandomAlgorithm(length) {
+  let scramble = [];
+  for (let i = 0; i < length; i++) {
+    let move = moves[Math.floor(Math.random() * moves.length)];
+    scramble.push(move);
+  }
+  return scramble.join(" ");
+}
+
+function startTimer() {
+  clearInterval(timer);
+  milliseconds = 0;
+  seconds = 0;
+  minutes = 0;
+  hours = 0;
+  updateStopwatch();
+  running = true;
+  timer = setInterval(() => {
+    if (running) {
+      milliseconds += 10;
+      if (milliseconds === 1000) {
+        milliseconds = 0;
+        seconds++;
+      }
+      if (seconds === 60) {
+        seconds = 0;
+        minutes++;
+      }
+      if (minutes === 60) {
+        minutes = 0;
+        hours++;
+      }
+      updateStopwatch();
+    }
+  }, 10);
+}
+
+function stopTimer() {
+  running = false;
+  clearInterval(timer);
+}
+
+function resetTimer() {
+  milliseconds = 0;
+  seconds = 0;
+  minutes = 0;
+  hours = 0;
+  updateStopwatch();
+}
+
+function updateStopwatch() {
+  let timeString =
+    (hours < 10 ? "0" : "") +
+    hours +
+    ":" +
+    (minutes < 10 ? "0" : "") +
+    minutes +
+    ":" +
+    (seconds < 10 ? "0" : "") +
+    seconds +
+    "." +
+    (milliseconds < 100 ? "0" : "") +
+    (milliseconds < 10 ? "0" : "") +
+    milliseconds;
+  let stopwatchElement = document.getElementById("stopwatch");
+  if (stopwatchElement) {
+    stopwatchElement.innerText = timeString;
+  }
+}
+</script>
     </body>
 </html>

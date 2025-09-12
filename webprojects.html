@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Certificates</title>
+        <title>Web Projects Bzmazem</title>
 
         <!-- تحميل مكتبة Bootstrap -->
         <link
@@ -23,6 +23,8 @@
 
         <link rel="stylesheet" href="Css/style.css">
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
         <!-- إضافة سكربتات مطلوبة فقط -->
         <script src="Js/all.min.js"></script>
         <script src="Js/test.js"></script>
@@ -30,38 +32,9 @@
         <style>
 
 
-            .title {
-                color: #ffffff;
-                font-size: 22px;
-                margin-bottom: 10px;
-            }
-            .stats-table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            .stats-table th, .stats-table td {
-                border: 1px solid #ddd;
-                padding: 10px;
-                text-align: center;
-            }
-            .stats-table th {
-                background: #1773EC;
-                color: white;
-            }
-            .gallery {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 15px;
-            }
-            .gallery img {
-                width: 100%;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
-
         </style>
     </head>
-    <body>
+    <body class="webProject">
         <!-- start nav  -->
         <nav class="navbar navbar-expand-lg">
             <div class="container">
@@ -102,16 +75,16 @@
             </div>
         </nav>
         <!-- end nav  -->
+         <!-- Container -->
         <div class="circle"></div>
         <div class="container">
-            
-
             <div class="row">
                 <section id="projects">
                     <div class="title mt-3 mb-3">
-                        <img src="Title-pro-web.svg" alt="My Projects Title">
+                        <img src="Svg/Title-pro-web.svg" alt="My Projects Title">
                     </div>
-                    <p class="text-white-50">Explore my software development projects that I have
+                    <p class="text-white-50">Explore my software development
+                        projects that I have
                         created and worked on.</p>
 
                     <div class="projects-grid">
@@ -119,7 +92,47 @@
                         <!-- مشروع 1 -->
                         <div class="project-card"
                             onclick="showProjectDetails(
-    'موقع شخصي لعرض المشاريع',
+    'اول موقع شخصي لعرض المشاريع',
+    'موقع إلكتروني شخصي يعرض مهاراتي ومشاريعي باستخدام HTML, CSS, وJavaScript.',
+    'Technologies: HTML, CSS, JavaScript',
+    'imag/projects/abdalrhman205.github.io_profile_.png',  
+    []
+  )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/projects/abdalrhman205.github.io_profile_.png"
+                                    alt="Portfolio Website Screenshot"
+                                    class="project-image">
+
+                                <h4>اول موقع شخصي لعرض المشاريع</h4>
+                            </div>
+                            <p>
+                                <a
+                                    href="https://abdalrhman205.github.io/profile/"
+                                    target="_blank" class="project-link">
+                                    abdalrhman205.github.io <i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </p>
+                            <p>
+                                <a
+                                    href="https://abdalrhman205.github.io/profile/"
+                                    target="_blank" class="project-link">
+                                    الموقع <i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                &nbsp;|&nbsp;
+                                <a
+                                    href="https://github.com/Abdalrhman205/profile"
+                                    target="_blank" class="project-link">
+                                    GitHub <i class="fab fa-github"></i>
+                                </a>
+                            </p>
+                        </div>
+                        <!-- مشروع 1 جزء 2  -->
+                        <div class="project-card"
+                            onclick="showProjectDetails(
+    ' موقع شخصي لعرض المشاريع',
     'موقع إلكتروني شخصي يعرض مهاراتي ومشاريعي باستخدام HTML, CSS, وJavaScript.',
     'Technologies: HTML, CSS, JavaScript',
     'imag/projects/portfolio_screenshot.png.png',  
@@ -129,26 +142,28 @@
                                 <img
                                     src="imag/projects/portfolio_screenshot.png.png"
                                     alt="Portfolio Website Screenshot"
-                                    class="project-image"
-                                    >
-                                <h4>موقع شخصي لعرض المشاريع</h4>
+                                    class="project-image">
+
+                                <h4> موقع شخصي لعرض المشاريع</h4>
                             </div>
                             <p>
-                                <a href="https://abdalrhman205.github.io/"
+                                <a
+                                    href="https://abdalrhman205.github.io/new-profile/"
                                     target="_blank" class="project-link">
                                     abdalrhman205.github.io <i
                                         class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                             </p>
                             <p>
-                                <a href="https://abdalrhman205.github.io/"
+                                <a
+                                    href="https://abdalrhman205.github.io/new-profile/"
                                     target="_blank" class="project-link">
                                     الموقع <i
                                         class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                                 &nbsp;|&nbsp;
                                 <a
-                                    href="https://github.com/yourusername/yourproject"
+                                    href="https://github.com/Abdalrhman205/new-profile"
                                     target="_blank" class="project-link">
                                     GitHub <i class="fab fa-github"></i>
                                 </a>
@@ -159,7 +174,7 @@
                         <div class="project-card"
                             onclick="showProjectDetails(
           'مشروع Car',
-          'مشروع ويب يعرض معلومات وتفاصيل خاصة بسيارة مع تصاميم واجهة مستخدم متقدمة.',
+          'مشروع قالب ويب من اول مشاريعي كانت الفكرة ان يكون قالب لمشروع موقع للقوالب .',
           'Technologies: HTML, CSS, JavaScript',
           'imag/projects/abdalrhman205.github.io_car_.png',
           []
@@ -179,14 +194,14 @@
                                 </a>
                             </p>
                             <p>
-                                <a href="https://abdalrhman205.github.io/"
+                                <a href="https://abdalrhman205.github.io/car"
                                     target="_blank" class="project-link">
                                     الموقع <i
                                         class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                                 &nbsp;|&nbsp;
                                 <a
-                                    href="https://github.com/yourusername/yourproject"
+                                    href="https://github.com/Abdalrhman205/car"
                                     target="_blank" class="project-link">
                                     GitHub <i class="fab fa-github"></i>
                                 </a>
@@ -198,7 +213,7 @@
                         <div class="project-card"
                             onclick="showProjectDetails(
           'مشروع Safer',
-          'موقع ويب يعرض معلومات أمنية وتقنيات حماية متقدمة لزيادة الأمان الإلكتروني.',
+          'اول قالب اصممه اكثر من صفحة يحتوى على معلومات بسيطة عن السفر والدول وكان ضمن موقع للقوالب .',
           'Technologies: HTML, CSS, JavaScript',
           'imag/projects/abdalrhman205.github.io_safer_.png',
           []
@@ -218,14 +233,14 @@
                                 </a>
                             </p>
                             <p>
-                                <a href="https://abdalrhman205.github.io/"
+                                <a href="https://abdalrhman205.github.io/safer"
                                     target="_blank" class="project-link">
                                     الموقع <i
                                         class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                                 &nbsp;|&nbsp;
                                 <a
-                                    href="https://github.com/yourusername/yourproject"
+                                    href="https://github.com/Abdalrhman205/safer"
                                     target="_blank" class="project-link">
                                     GitHub <i class="fab fa-github"></i>
                                 </a>
@@ -237,7 +252,7 @@
                         <div class="project-card"
                             onclick="showProjectDetails(
           'مشروع Conan Film',
-          'موقع ويب لعرض أفلام وقوائم تشغيل مع إمكانية البحث والتصفية.',
+          'فكرة لعرض افلام شخصيتي الكرتونية المضله لاكن لم اكمل المشروع وكان ضمن موقع الخاص بالقوالب ',
           'Technologies: HTML, CSS, JavaScript',
           'imag/projects/abdalrhman205.github.io_conanfilm_.png',
           []
@@ -258,14 +273,15 @@
                                 </a>
                             </p>
                             <p>
-                                <a href="https://abdalrhman205.github.io/"
+                                <a
+                                    href="https://abdalrhman205.github.io/conanfilm"
                                     target="_blank" class="project-link">
                                     الموقع <i
                                         class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                                 &nbsp;|&nbsp;
                                 <a
-                                    href="https://github.com/yourusername/yourproject"
+                                    href="https://github.com/Abdalrhman205/conanfilm"
                                     target="_blank" class="project-link">
                                     GitHub <i class="fab fa-github"></i>
                                 </a>
@@ -277,7 +293,7 @@
                         <div class="project-card"
                             onclick="showProjectDetails(
           'منصة Zero Web School',
-          'منصة تعليم إلكترونية تفاعلية لتعلم أساسيات تطوير الويب.',
+          'قالب من سلسلة تدريب لقوالب من منصة الزيرو',
           'Technologies: HTML, CSS, JavaScript',
           'imag/projects/abdalrhman205.github.io_Template-1_.png',
           []
@@ -296,14 +312,15 @@
                                     class="project-link">Template-1</a>
                             </p>
                             <p>
-                                <a href="https://abdalrhman205.github.io/"
+                                <a
+                                    href="https://abdalrhman205.github.io/Template-1"
                                     target="_blank" class="project-link">
                                     الموقع <i
                                         class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                                 &nbsp;|&nbsp;
                                 <a
-                                    href="https://github.com/yourusername/yourproject"
+                                    href="https://github.com/Abdalrhman205/Template-1"
                                     target="_blank" class="project-link">
                                     GitHub <i class="fab fa-github"></i>
                                 </a>
@@ -313,7 +330,7 @@
                         <div class="project-card"
                             onclick="showProjectDetails(
           'منصة Zero Web School',
-          'منصة تعليم إلكترونية تفاعلية لتعلم أساسيات تطوير الويب.',
+          'قالب من سلسلة تدريب لقوالب من منصة الزيرو',
           'Technologies: HTML, CSS, JavaScript',
           'imag/projects/abdalrhman205.github.io_Template-2_.png',
           []
@@ -329,17 +346,18 @@
                                 <a
                                     href="https://abdalrhman205.github.io/Template-2"
                                     target="_blank"
-                                    class="project-link">Template-2</a> 
+                                    class="project-link">Template-2</a>
                             </p>
                             <p>
-                                <a href="https://abdalrhman205.github.io/"
+                                <a
+                                    href="https://abdalrhman205.github.io/Template-2"
                                     target="_blank" class="project-link">
                                     الموقع <i
                                         class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                                 &nbsp;|&nbsp;
                                 <a
-                                    href="https://github.com/yourusername/yourproject"
+                                    href="https://github.com/Abdalrhman205/Template-2"
                                     target="_blank" class="project-link">
                                     GitHub <i class="fab fa-github"></i>
                                 </a>
@@ -349,7 +367,7 @@
                         <div class="project-card"
                             onclick="showProjectDetails(
           'منصة Zero Web School',
-          'منصة تعليم إلكترونية تفاعلية لتعلم أساسيات تطوير الويب.',
+          'قالب من سلسلة تدريب لقوالب من منصة الزيرو',
           'Technologies: HTML, CSS, JavaScript',
           'imag/projects/abdalrhman205.github.io_Template-3_.png',
           []
@@ -365,17 +383,18 @@
                                 <a
                                     href="https://abdalrhman205.github.io/Template-3"
                                     target="_blank"
-                                    class="project-link">Template-3</a> 
+                                    class="project-link">Template-3</a>
                             </p>
                             <p>
-                                <a href="https://abdalrhman205.github.io/"
+                                <a
+                                    href="https://abdalrhman205.github.io/Template-3"
                                     target="_blank" class="project-link">
                                     الموقع <i
                                         class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                                 &nbsp;|&nbsp;
                                 <a
-                                    href="https://github.com/yourusername/yourproject"
+                                    href="https://github.com/Abdalrhman205/Template-3"
                                     target="_blank" class="project-link">
                                     GitHub <i class="fab fa-github"></i>
                                 </a>
@@ -389,27 +408,21 @@
           'منظومة أرشفة الملفات',
           'نظام لإدارة وأرشفة الملفات الرقمية بطريقة منظمة مع إمكانية البحث السريع. تم تطويره باستخدام Laravel وMySQL.',
           'Technologies: Laravel, MySQL',
-          'imag/projects/file_archiving_2025-08-04_02-11-51.jpg',
+          'imag/projects/archives.png',
           []
         )">
                             <div class="image-title">
                                 <img
-                                    src="imag/projects/file_archiving_2025-08-04_02-11-51.jpg"
+                                    src="imag/projects/archives.png"
                                     alt="File Archiving System Screenshot"
                                     class="project-image">
                                 <h4>منظومة أرشفة الملفات</h4>
                             </div>
-                            <p>Laravel, MySQL <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                            <p>Laravel, MySQL </p>
                             <p>
-                                <a href="https://abdalrhman205.github.io/"
-                                    target="_blank" class="project-link">
-                                    الموقع <i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                                &nbsp;|&nbsp;
+
                                 <a
-                                    href="https://github.com/yourusername/yourproject"
+                                    href="https://github.com/Abdalrhman205/Archiving"
                                     target="_blank" class="project-link">
                                     GitHub <i class="fab fa-github"></i>
                                 </a>
@@ -421,29 +434,23 @@
                         <div class="project-card"
                             onclick="showProjectDetails(
           'منظومة إدارة الديون',
-          'نظام متكامل لإدارة الديون، متابعة السداد، وإصدار التقارير المالية باستخدام Laravel وVue.js.',
-          'Technologies: Laravel, Vue.js, MySQL',
-          'imag/projects/debt_management_2025-08-04_02-11-51.jpg',
+          'نظام ادارة الديون لم يكتمل ويحتاج الي تعديلات كثيره وهو اول نظام laravel ابنيه ',
+          'Technologies: Laravel, MySQL',
+          'imag/projects/Debt.png',
           []
         )">
                             <div class="image-title">
                                 <img
-                                    src="imag/projects/debt_management_2025-08-04_02-11-51.jpg"
+                                    src="imag/projects/Debt.png"
                                     alt="Debt Management System Screenshot"
                                     class="project-image">
                                 <h4>منظومة إدارة الديون</h4>
                             </div>
-                            <p>Laravel, Vue.js <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                            <p>Laravel, MySql </p>
                             <p>
-                                <a href="https://abdalrhman205.github.io/"
-                                    target="_blank" class="project-link">
-                                    الموقع <i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                                &nbsp;|&nbsp;
+
                                 <a
-                                    href="https://github.com/yourusername/yourproject"
+                                    href="https://github.com/Abdalrhman205/Debt"
                                     target="_blank" class="project-link">
                                     GitHub <i class="fab fa-github"></i>
                                 </a>
@@ -455,29 +462,61 @@
                         <div class="project-card"
                             onclick="showProjectDetails(
           'منصة دروس أون لاين',
-          'منصة تعليمية عبر الإنترنت تقدم دروسًا تفاعلية مع تسجيل الطلاب وإدارة المحتوى باستخدام React وNode.js.',
-          'Technologies: React, Node.js, MongoDB',
-          'imag/projects/online_lessons_2025-08-04_02-11-51.jpg',
+          'افضل منظومة انشاءه لقد قمت بانشاء اكثر من 30 صفحة فيها وكل شي يعمل فيها ',
+          'Technologies: Laravel,MySql',
+          'imag/projects/GradStar.png',
           []
         )">
                             <div class="image-title">
                                 <img
-                                    src="imag/projects/online_lessons_2025-08-04_02-11-51.jpg"
+                                    src="imag/projects/GradStar.png"
                                     alt="Online Lessons Platform Screenshot"
                                     class="project-image">
                                 <h4>منصة دروس أون لاين</h4>
                             </div>
-                            <p>React, Node.js <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                            <p>Laravel MySql </p>
                             <p>
-                                <a href="https://abdalrhman205.github.io/"
+
+                                <a
+                                    href="https://github.com/Abdalrhman205/GradStar"
+                                    target="_blank" class="project-link">
+                                    GitHub <i class="fab fa-github"></i>
+                                </a>
+                            </p>
+
+                        </div>
+                        <!-- مشروع 9 -->
+                                                <div class="project-card"
+                            onclick="showProjectDetails(
+          'مشروع YourOrder',
+          'منصة اعمل عليها لتوصيل الطلبيات وهيا مشروع جديد وتحدي جديد',
+          'Technologies: HTML, CSS, JavaScript,Django',
+          'imag/projects/YourOrder.png',
+          []
+        )">
+                            <div class="image-title">
+                                <img
+                                    src="imag/projects/YourOrder.png"
+                                    alt="Safer Project Screenshot"
+                                    class="project-image">
+                                <h4>مشروع YourOrder طلبك</h4>
+                            </div>
+                            <p>
+                                <a href="https://abdalrhman205.github.io/YourOrder/"
+                                    target="_blank" class="project-link">
+                                    abdalrhman205.github.io/safer <i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://abdalrhman205.github.io/YourOrder/"
                                     target="_blank" class="project-link">
                                     الموقع <i
                                         class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                                 &nbsp;|&nbsp;
                                 <a
-                                    href="https://github.com/yourusername/yourproject"
+                                    href="https://github.com/Abdalrhman205/YourOrder"
                                     target="_blank" class="project-link">
                                     GitHub <i class="fab fa-github"></i>
                                 </a>
@@ -488,138 +527,51 @@
                     </div>
                 </section>
             </div>
-
-            <!-- روابط أيقونات Font Awesome -->
-            <link
-                rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-            <style>
-  #projects {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .project-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: #1b1b1b;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-    width: 270px;
-    height: 330px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 15px;
-    text-align: center;
-    color: #fff;
-  }
-
-  .project-card:hover {
-    transform: scale(1.07);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-  }
-
-  .project-image {
-    height: 190px;
-    width: 100%;
-    object-fit: contain;
-    border-radius: 10px;
-    margin-bottom: 14px;
-    transition: transform 0.3s ease;
-  }
-
-  .project-card:hover .project-image {
-    transform: scale(1.05);
-  }
-
-  .image-title h4 {
-    font-size: 18px;
-    margin: 0 0 10px;
-    color: #ffffff;
-    font-weight: 600;
-  }
-
-  .project-link {
-    color: #00aaff;
-    font-size: 15px;
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  .project-link i {
-    font-size: 14px;
-    transition: transform 0.3s ease;
-  }
-
-  .project-link:hover {
-    text-decoration: underline;
-    color: #0090dd;
-  }
-
-  .project-link:hover i {
-    transform: translate(3px, -3px);
-  }
-</style>
-
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-            <script>
-  function showProjectDetails(title, description, footer, imageUrl, extraImages = []) {
-    let extraImagesHTML = "";
-    if (extraImages.length > 0) {
-      extraImagesHTML = "<h4 style='margin-top:15px;'>Additional Images</h4>";
-      extraImages.forEach(img => {
-        extraImagesHTML += `<img src="${img}" alt="Extra Image" style="max-width:100%;margin-top:5px;border-radius:8px;">`;
-      });
-    }
-    Swal.fire({
-      html: `
-        <img src="${imageUrl}" alt="${title}" style="max-width:100%;margin-bottom:15px;border-radius:8px;">
-        <h2 style="margin-bottom:10px;">${title}</h2>
-        <p style="font-size:16px;">${description}</p>
-        ${extraImagesHTML}
-      `,
-      footer: footer,
-      width: 600,
-      confirmButtonText: 'Close'
-    });
-  }
-</script>
-
         </div>
+        <!-- End Container -->
 
         <!-- footer -->
         <footer>
             <div class="footer-content">
                 <div class="footer-left">
                     <div class="image">
-                        <img src="Profile.png" alt="Profile">
+                        <img src="imag/Profile.png" alt="Profile">
                     </div>
                     <div class="info">
                         <h1>Abdalrhman Bzmazem</h1>
                         <hr>
                         <p>I don't give up</p>
+                        <div class="social-media">
+                            <a
+                                href="https://www.facebook.com/share/1BCNWvRMeE/?mibextid=wwXIfr"
+                                class="sm-link" aria-label="Facebook"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a
+                                href="https://www.tiktok.com/@abdalrhmanbzmazem?_t=ZM-8zeHrazeI3p&_r=1"
+                                class="sm-link" aria-label="TikTok"><i
+                                    class="fab fa-tiktok"></i></a>
+                            <a
+                                href="https://www.instagram.com/abdalrhmanbzmazem?igsh=ZWp0c2Z3cm8yaDBo&utm_source=qr"
+                                class="sm-link" aria-label="Instagram"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/Abdalrhman205"
+                                class="sm-link" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+
+                        </div>
                     </div>
                 </div>
                 <div class="footer-menu">
                     <ul>
-                        <li><i class="fas fa-circle"></i> About</li>
-                        <li><i class="fas fa-circle"></i> Skill &
-                            Resume</li>
-                        <li><i class="fas fa-circle"></i> Projects</li>
+                        <li><a href="index.html#aboutme"><i
+                                    class="fas fa-circle"></i> About</a></li>
+                        <li><a href="index.html#skills"><i
+                                    class="fas fa-circle"></i> Skill &
+                                Resume</a></li>
+                        <li><a href="index.html#projects"><i
+                                    class="fas fa-circle"></i> Projects</a></li>
                     </ul>
+
                 </div>
                 <div class="footer-right">
                     <p><strong>Contact:</strong></p>
@@ -628,8 +580,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2025 All Rights Reserved | Designed by Abdalrhman
-                Bzmazem
+                &copy; 2025 All Rights Reserved | Designed by Abdalrhman Bzmazem
             </div>
         </footer>
         <!-- footer -->
