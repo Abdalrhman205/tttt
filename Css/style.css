@@ -825,12 +825,14 @@ section h2 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   width: 308px;
   height: -webkit-fill-available;
+      height: max-content;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 15px;
   text-align: center;
   color: #fff;
 }
+
 
 .webProject .project-card:hover {
   transform: scale(1.07);
