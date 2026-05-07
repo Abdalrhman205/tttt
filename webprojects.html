@@ -528,17 +528,6 @@
                         </div>
 
                     </div>
-                    <script>
-  // تفعيل الصور بعد تحميلها
-  document.querySelectorAll('.project-image').forEach(img => {
-    if (img.complete) {
-      img.classList.add('loaded');
-    } else {
-      img.addEventListener('load', () => img.classList.add('loaded'));
-      img.addEventListener('error', () => img.classList.add('loaded'));
-    }
-  });
-</script>
                 </section>
             </div>
         </div>
