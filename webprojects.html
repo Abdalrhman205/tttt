@@ -75,13 +75,14 @@
             </div>
         </nav>
         <!-- end nav  -->
-         <!-- Container -->
+        <!-- Container -->
         <div class="circle"></div>
         <div class="container">
             <div class="row">
                 <section id="projects">
                     <div class="title mt-3 mb-3">
-                        <img src="Svg/Title-pro-web.svg" alt="My Projects Title">
+                        <img src="Svg/Title-pro-web.svg"
+                            alt="My Projects Title">
                     </div>
                     <p class="text-white-50">Explore my software development
                         projects that I have
@@ -486,7 +487,7 @@
 
                         </div>
                         <!-- مشروع 9 -->
-                                                <div class="project-card"
+                        <div class="project-card"
                             onclick="showProjectDetails(
           'مشروع YourOrder',
           'منصة اعمل عليها لتوصيل الطلبيات وهيا مشروع جديد وتحدي جديد',
@@ -502,14 +503,16 @@
                                 <h4>مشروع YourOrder طلبك</h4>
                             </div>
                             <p>
-                                <a href="https://abdalrhman205.github.io/YourOrder/"
+                                <a
+                                    href="https://abdalrhman205.github.io/YourOrder/"
                                     target="_blank" class="project-link">
                                     abdalrhman205.github.io/safer <i
                                         class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                             </p>
                             <p>
-                                <a href="https://abdalrhman205.github.io/YourOrder/"
+                                <a
+                                    href="https://abdalrhman205.github.io/YourOrder/"
                                     target="_blank" class="project-link">
                                     الموقع <i
                                         class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -525,6 +528,17 @@
                         </div>
 
                     </div>
+                    <script>
+  // تفعيل الصور بعد تحميلها
+  document.querySelectorAll('.project-image').forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+      img.addEventListener('error', () => img.classList.add('loaded'));
+    }
+  });
+</script>
                 </section>
             </div>
         </div>
